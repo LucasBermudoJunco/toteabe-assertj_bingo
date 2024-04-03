@@ -2,6 +2,8 @@ package org.iesvdm;
 
 
 import static org.assertj.core.api.Assertions.*;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 //import org.junit.jupiter.api.Timeout;
 //import java.util.concurrent.TimeUnit;
@@ -84,22 +86,29 @@ public class BingoTest {
         // WHEN
         int[][] cartonTamMenor1 = new int[8][2];
         int[][] cartonTamMenor2 = new int[8][2];
+        int[][] cartonTamMenor3 = new int[8][2];
 
         // DO & THEN
 
         // Comprobación de que el método lanza una Excepción de cualquier tipo
         // cuando se le introduce un array de menor tamaño menor que el tamaño para el cual
         // está preparado
+
+        // Usando el static Assertions de assertj
         assertThatThrownBy(() -> Bingo.ponerBlancos(cartonTamMenor1));
 
         // Comprobación de que la excepción que el método lanza es una
         // ArrayIndexOutOfBoundsException
         // cuando se le introduce un array de menor tamaño que el tamaño para el cual
         // está preparado
+
+        // Usando el Assertions de junit
+        Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, () -> Bingo.ponerBlancos(cartonTamMenor2));
+
         boolean seProdujoArrayIndexOutOfBoundsException = false;
 
         try{
-            Bingo.ponerBlancos(cartonTamMenor2);
+            Bingo.ponerBlancos(cartonTamMenor3);
 
             System.out.println("No se ha producido ninguna excepción");
         } catch(ArrayIndexOutOfBoundsException excep){
