@@ -84,9 +84,9 @@ public class BingoTest {
     void testPonerBlancos_2_1_CartonConTamanyoMenorAlHabitual(){
 
         // WHEN
-        int[][] cartonTamMenor1 = new int[8][2];
-        int[][] cartonTamMenor2 = new int[8][2];
-        int[][] cartonTamMenor3 = new int[8][2];
+        int[][] cartonTamMenor1 = new int[2][2];
+        int[][] cartonTamMenor2 = new int[2][2];
+        int[][] cartonTamMenor3 = new int[2][2];
 
         // DO & THEN
 
