@@ -6,6 +6,8 @@ import static org.assertj.core.api.Assertions.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.Arrays;
 //import org.junit.jupiter.api.Timeout;
 //import java.util.concurrent.TimeUnit;
@@ -630,10 +632,77 @@ public class BingoTest {
 
     }
 
-    @Test
-    void testPintadCarton(){
-
-    }
+//    @Test
+//    void testPintarCarton(){
+//
+//        // WHEN
+//
+//        int[][] carton;
+//        int[] bolas;
+//
+//        // DO & THEN
+//
+//        int cantComprob = 10;
+//
+//        for(int h=0; h<cantComprob; h++){
+//            // Creación del carton
+//
+//            carton = new int[(int)(Math.random()*30+1)][(int)(Math.random()*30+1)];
+//
+//            for(int i=0; i<carton.length; i++){
+//                for(int j=0; j<carton[0].length; j++){
+//                    carton[i][j] = (int)(Math.random()*201-100);
+//                }
+//            }
+//
+//            // Creación del array de las bolas
+//            bolas = new int[(int)(Math.random()*30+1)];
+//
+//            for(int i=0; i<bolas.length; i++){
+//                bolas[i] = (int)(Math.random()*21-10);
+//            }
+//
+//            // Almacenamiento en una variable String el mismo ´´println`` que imprime el método en cuestión
+//            int aciertos = 0;
+//
+//            String textoImpreso = "\n\n";
+//
+//            for (int i = 0; i < carton[0].length; i++) // Recorre las 3 filas que vamos a pintar
+//            {
+//                textoImpreso = "|  ";
+//
+//                for (int j = 0; j < carton.length; j++) // Pinta las 8 posiciones de cada fila
+//                {
+//
+//                    boolean seTacha = Bingo.buscarValorRepetido(bolas, carton[j][i]);
+//
+//                    if(seTacha) // Si la bola ha salido pinto X, si no pinto la casilla original
+//                    {
+//                        textoImpreso = "X  |  ";
+//
+//                        aciertos++;
+//                    }
+//                    else
+//                    {
+//                        textoImpreso = carton[j][i] + "  |  ";
+//                    }
+//
+//                }
+//                textoImpreso = "\n";
+//            }
+//            textoImpreso = "\n\n";
+//
+//            // Llamada al método en cuestión
+//            ByteArrayOutputStream contenido = new ByteArrayOutputStream();
+//            System.setOut(new PrintStream(contenido));
+//
+//            Bingo.pintarCarton(carton, bolas);
+//
+//            // Comprobación de que el método de que el método en cuestión proporciona el resultado correcto
+//            assertThat(textoImpreso).isEqualTo(contenido.toString().trim());
+//        }
+//
+//    }
 
     @Test
     void testInsertarAlFinal_1_NumeroNuevoSeColocoAlFinal(){
