@@ -831,7 +831,7 @@ public class BingoTest {
                 arrayNumeros[i] = (int) (Math.random() * 100 + 1);
             }
 
-            // Copia del arrayNumeros para ordenarlos de distinto modo y
+            // Copia del arrayNumeros para ordenarlos de distinta forma y
             // Comprobar que el resultado de la comprobación es el mismo
             int[] arrayCopia = arrayNumeros.clone();
 
